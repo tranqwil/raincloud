@@ -20,4 +20,6 @@ int main() {
 	speaker.SetPitch(1.1);
 	speaker.Play(track);
 
+	return 0;
+
 }
