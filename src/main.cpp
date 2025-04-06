@@ -1,20 +1,23 @@
-#include <AL/al.h>
-#include <AL/alc.h>
-#include <iostream>
+#include "SoundDevice.h"
+#include "SoundBuffer.h"
+#include "SoundSource.h"
+#include <stdio.h>
+
 
 int main() {
-	ALCdevice* device = alcOpenDevice(nullptr);// open default
-	if (!device) {
-		std::cerr << "Failed to open OpenAL device." << std::endl;
-		return 1;
-	}
 
-	ALCcontext* context = alcCreateContext(device, nullptr);
-	alcMakeContextCurrent(context);
+	printf("Starting mistAL!\n");
 
-	std::cout << "OpenAL device initialized!" << std::endl;
+	SoundDevice* device = SoundDevice::Get();
+	SoundBuffer* buffer = SoundBuffer::Get();
 
-	alcDestroyContext(context);
-	alcCloseDevice(device);
-	return 0;
+	ALuint track = buffer->AddSoundEffect("F:\\Ableton Projects\\SMACK Project\\Samples\\Processed\\Consolidate\\22-10-24_TextMyPhone [2024-10-22 193114].wav");
+
+
+	SoundSource speaker;
+
+	speaker.SetGain(1.0);
+	speaker.SetPitch(1.1);
+	speaker.Play(track);
+
 }
