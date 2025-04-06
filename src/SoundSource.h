@@ -14,6 +14,10 @@ public:
 
 	void SetGain(float gain);
 
+	void SetPosition(float x, float y, float z);
+
+	void SetVelocity(float x, float y, float z);
+
 private:
 	ALuint sourceID = 0;
 	float pitch = 1.0f;
@@ -24,4 +28,6 @@ private:
 	ALuint buffer = 0;
 
 };
+
+
 

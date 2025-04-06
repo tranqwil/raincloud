@@ -47,14 +47,33 @@ void SoundSource::SetIsLooping(bool loop)
 	alSourcei(sourceID, AL_LOOPING, isLooping);
 }
 
-void SoundSource::SetPitch(float pitch)
+void SoundSource::SetPitch(float in_pitch)
 {
-	this->pitch = pitch;
+	this->pitch = in_pitch;
 	alSourcef(sourceID, AL_PITCH, pitch);
 }
 
-void SoundSource::SetGain(float gain)
+void SoundSource::SetGain(float in_gain)
 {
-	this->gain = gain;
+	this->gain = in_gain;
 	alSourcef(sourceID, AL_GAIN, gain);
+}
+
+void SoundSource::SetPosition(float x, float y, float z)
+{
+  this->position[0] = x;
+  this->position[1] = y;
+  this->position[2] = z;
+
+  alSource3f(sourceID, AL_POSITION, position[0], position[1], position[2]);
+
+}
+
+void SoundSource::SetVelocity(float x, float y, float z)
+{
+  this->velocity[0] = x;
+  this->velocity[1] = y;
+  this->velocity[2] = z;
+
+  alSource3f(sourceID, AL_VELOCITY, velocity[0], velocity[1], velocity[2]);
 }

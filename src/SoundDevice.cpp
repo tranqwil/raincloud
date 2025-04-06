@@ -1,6 +1,7 @@
 #include "SoundDevice.h"
 #include <AL\al.h>
 #include <stdio.h>
+#include <iostream>
 
 SoundDevice* SoundDevice::Get()
 {
@@ -14,20 +15,20 @@ SoundDevice::SoundDevice()
 	pALCdevice = alcOpenDevice(nullptr);
 	if(!pALCdevice)
 	{
-		throw ("SoundDevice::SoundDevice() - Failed to get default device");
+		std::cerr << "SoundDevice::SoundDevice() - Failed to get default device";
 	}
 
 	//Create ALC Context
 	pALCcontext = alcCreateContext(pALCdevice, nullptr);
 	if (!pALCcontext)
 	{
-		throw ("SoundDevice::SoundDevice() - Failed to create context");
+		std::cerr << "SoundDevice::SoundDevice() - Failed to create context";
 	}
 
 	//Make context the current context
 	if (!alcMakeContextCurrent(pALCcontext))
 	{
-		throw ("SoundDevice::SoundDevice() - Failed to make context current");
+		std::cerr << "SoundDevice::SoundDevice() - Failed to make context current";
 	}
 
 	const ALCchar* name = nullptr;
@@ -41,23 +42,26 @@ SoundDevice::SoundDevice()
 	}
 	printf("Opened \"%s\"\n", name);
 
+
+
 }
 
 SoundDevice::~SoundDevice()
 {
 	if (!alcMakeContextCurrent(nullptr))
 	{
-		throw ("SoundDevice::~SoundDevice() - Failed to make context current");
+		std::cerr << "SoundDevice::~SoundDevice() - Failed to make context current";
 	}
 
 	alcDestroyContext(pALCcontext);
 	if (pALCcontext) 
 	{
-		throw ("SoundDevice::~SoundDevice() - Failed to destroy context");
+		std::cerr << "SoundDevice::~SoundDevice() - Failed to destroy context";
 	}
 
 	if (!alcCloseDevice(pALCdevice))
 	{
-		throw ("SoundDevice::~SoundDevice() - Failed to close device");
+		std::cerr << "SoundDevice::~SoundDevice() - Failed to close device";
 	}
 }
+
