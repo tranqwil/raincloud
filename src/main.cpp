@@ -6,7 +6,7 @@
 
 int main() {
 
-	printf("Starting mistAL!\n");
+	printf("Starting RainCloud!\n");
 
 	SoundDevice* device = SoundDevice::Get();
 	SoundBuffer* buffer = SoundBuffer::Get();
