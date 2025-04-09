@@ -11,14 +11,19 @@ int main() {
 	SoundDevice* device = SoundDevice::Get();
 	SoundBuffer* buffer = SoundBuffer::Get();
 
-	ALuint track = buffer->AddSoundEffect("../Samples/song.wav");
+	ALuint track = buffer->AddSoundEffect("../samples/song.wav");
 
 	SoundSource speaker;
 
 	speaker.SetGain(1.0);
-	speaker.SetPitch(1.1);
-	speaker.SetPosition(-2.0f, 5.0f, 0.0f);
+	speaker.SetPitch(.9f);
+	speaker.SetPosition(0.0f, 0.0f, 0.0f);
 	speaker.Play(track);
+
+	while (true)
+	{
+		//loop
+	}
 
 
 
