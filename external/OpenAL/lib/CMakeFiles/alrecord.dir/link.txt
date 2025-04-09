@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/alrecord.dir/examples/alrecord.c.o -o alrecord  -Wl,-rpath,/Users/will/dev/openal-soft/build -pthread libalsoft.excommon.a libopenal.1.24.3.dylib
