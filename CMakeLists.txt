@@ -26,6 +26,8 @@ add_executable(RainCloud
         src/SoundDevice.h
         src/SoundSource.cpp
         src/SoundSource.h
+        src/Stream.cpp
+        src/Stream.h
 
 
 )

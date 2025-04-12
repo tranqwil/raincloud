@@ -1,6 +1,7 @@
 #include "SoundDevice.h"
 #include "SoundBuffer.h"
 #include "SoundSource.h"
+#include "Stream.h"
 #include <stdio.h>
 
 
@@ -9,20 +10,14 @@ int main() {
 	printf("Starting RainCloud!\n");
 
 	SoundDevice* device = SoundDevice::Get();
-	SoundBuffer* buffer = SoundBuffer::Get();
+	Stream stream ("../samples/song.wav");
 
-	ALuint track = buffer->AddSoundEffect("../samples/song.wav");
+	stream.Play();
 
-	SoundSource speaker;
-
-	speaker.SetGain(1.0);
-	speaker.SetPitch(.9f);
-	speaker.SetPosition(0.0f, 0.0f, 0.0f);
-	speaker.Play(track);
 
 	while (true)
 	{
-		//loop
+		stream.Update();
 	}
 
 
