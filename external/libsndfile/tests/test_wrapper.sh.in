@@ -53,7 +53,7 @@ set -e
 # Need this for when we're running from files collected into the
 # libsndfile-testsuite-@PACKAGE_VERSION@ tarball.
 echo "Running unit tests from src/ directory of source code tree."
-./src/test_main@EXEEXT@
+./raylib/test_main@EXEEXT@
 
 echo
 echo "Running end-to-end tests from tests/ directory."

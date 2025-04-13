@@ -161,7 +161,7 @@ enum
 
 /*---------------------------------------------------------------------------------------
 ** Formats that may be supported at some time in the future.
-** When support is finalised, these values move to src/sndfile.h.
+** When support is finalised, these values move to raylib/sndfile.h.
 */
 
 enum
@@ -318,12 +318,12 @@ typedef struct
 
 #if USE_WINDOWS_API
 	/*
-	**	These fields can only be used in src/file_io.c.
+	**	These fields can only be used in raylib/file_io.c.
 	**	They are basically the same as a windows file HANDLE.
 	*/
 	void 	*handle, *hsaved ;
 #else
-	/* These fields can only be used in src/file_io.c. */
+	/* These fields can only be used in raylib/file_io.c. */
 	int 	filedes, savedes ;
 #endif
 

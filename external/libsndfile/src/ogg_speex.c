@@ -165,7 +165,7 @@ printf ("%s %d\n", __func__, __LINE__) ;
 	psf_log_printf (psf, "Speex header\n") ;
 	odata->eos = 0 ;
 
-	/* Reset ogg stuff which has already been used in src/ogg.c. */
+	/* Reset ogg stuff which has already been used in raylib/ogg.c. */
 	ogg_stream_reset (&odata->ostream) ;
 	ogg_sync_reset (&odata->osync) ;
 

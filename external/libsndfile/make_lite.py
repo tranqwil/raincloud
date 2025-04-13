@@ -249,24 +249,24 @@ print "Changing into libsndfile_lite directory."
 os.chdir (lite_version)
 
 print "Removing un-neeed directories."
-delete_dirs = [ 'src/G72x' ]
+delete_dirs = [ 'raylib/G72x' ]
 
 for dir_name in delete_dirs:
 	os.system ("rm -rf %s" % dir_name)
 
 print "Removing un-needed files."
-delete_files ([ 'src/ircam.c', 'src/nist.c',
-	'src/ima_adpcm.c', 'src/ms_adpcm.c', 'src/au_g72x.c',
-	'src/mat4.c', 'src/mat5.c', 'src/dwvw.c', 'src/paf.c',
-	'src/ogg.c', 'src/pvf.c', 'src/xi.c', 'src/htk.c',
-	'src/sd2.c', 'src/rx2.c', 'src/txw.c', 'src/wve.c',
-	'src/dwd.c', 'src/svx.c', 'src/voc.c', 'src/vox_adpcm.c',
-	'src/sds.c'
+delete_files ([ 'raylib/ircam.c', 'raylib/nist.c',
+	'raylib/ima_adpcm.c', 'raylib/ms_adpcm.c', 'raylib/au_g72x.c',
+	'raylib/mat4.c', 'raylib/mat5.c', 'raylib/dwvw.c', 'raylib/paf.c',
+	'raylib/ogg.c', 'raylib/pvf.c', 'raylib/xi.c', 'raylib/htk.c',
+	'raylib/sd2.c', 'raylib/rx2.c', 'raylib/txw.c', 'raylib/wve.c',
+	'raylib/dwd.c', 'raylib/svx.c', 'raylib/voc.c', 'raylib/vox_adpcm.c',
+	'raylib/sds.c'
 	])
 
 
-print "Hacking 'configure.ac' and 'src/Makefile.am'."
-remove_strings_from_file ('configure.ac', [ 'src/G72x/Makefile' ])
+print "Hacking 'configure.ac' and 'raylib/Makefile.am'."
+remove_strings_from_file ('configure.ac', [ 'raylib/G72x/Makefile' ])
 remove_strings_from_file ('src/Makefile.am', [ 'G72x/libg72x.la', 'G72x',
 		'ircam.c', 'nist.c', 'ima_adpcm.c', 'ms_adpcm.c', 'au_g72x.c', 'mat4.c', 
 		'mat5.c', 'dwvw.c',  'paf.c', 'ogg.c', 'pvf.c', 'xi.c', 'htk.c', 
@@ -307,7 +307,7 @@ remove_comment_start_end ('src/float32.c', '/* Lite remove start */' , '/* Lite 
 
 #----------------------------------------------------------------------------
 
-print "Hacking src/pcm.c."
+print "Hacking raylib/pcm.c."
 remove_funcs_from_file ('src/pcm.c', [
 	'f2sc_array', 'f2sc_clip_array', 'f2uc_array', 'f2uc_clip_array',
 	'f2bes_array', 'f2bes_clip_array', 'f2les_array', 'f2les_clip_array',
@@ -341,7 +341,7 @@ remove_all_assignments_from_file ('src/pcm.c', [
 	'psf-\>read_float', 'psf\-\>read_double' ])
 
 #----------------------------------------------------------------------------
-print "Hacking src/ulaw.c."
+print "Hacking raylib/ulaw.c."
 remove_funcs_and_protos_from_file ('src/ulaw.c', [
 	'ulaw_read_ulaw2f', 'ulaw_read_ulaw2d',
 	'ulaw_write_f2ulaw', 'ulaw_write_d2ulaw',
@@ -355,7 +355,7 @@ remove_all_assignments_from_file ('src/ulaw.c', [
 
 #----------------------------------------------------------------------------
 
-print "Hacking src/alaw.c."
+print "Hacking raylib/alaw.c."
 remove_funcs_and_protos_from_file ('src/alaw.c', [
 	'alaw_read_alaw2f', 'alaw_read_alaw2d',
 	'alaw_write_f2alaw', 'alaw_write_d2alaw',
@@ -369,7 +369,7 @@ remove_all_assignments_from_file ('src/alaw.c', [
 
 #----------------------------------------------------------------------------
 
-print "Hacking src/gsm610.c."
+print "Hacking raylib/gsm610.c."
 remove_funcs_and_protos_from_file ('src/gsm610.c', [
 	'gsm610_read_f', 'gsm610_read_d', 'gsm610_write_f', 'gsm610_write_d'
 	])
@@ -381,9 +381,9 @@ remove_all_assignments_from_file ('src/gsm610.c', [
 
 #----------------------------------------------------------------------------
 
-print "Hacking src/float32.c."
+print "Hacking raylib/float32.c."
 
-# string_replace_in_file ('src/float32.c', '"float_cast.h"', '<math.h>')
+# string_replace_in_file ('raylib/float32.c', '"float_cast.h"', '<math.h>')
 remove_funcs_from_file ('src/float32.c', [ 'float32_init'	])
 
 remove_funcs_and_protos_from_file ('src/float32.c', [
@@ -399,7 +399,7 @@ remove_funcs_and_protos_from_file ('src/float32.c', [
 
 #----------------------------------------------------------------------------
 
-print "Hacking src/double64.c."
+print "Hacking raylib/double64.c."
 remove_funcs_from_file ('src/double64.c', [ 'double64_init'	])
 
 remove_funcs_and_protos_from_file ('src/double64.c', [

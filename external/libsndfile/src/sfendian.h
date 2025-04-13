@@ -123,7 +123,7 @@ ENDSWAP_64 (uint64_t x)
 #elif (CPU_IS_BIG_ENDIAN == 1)
 	#define	MAKE_MARKER(a, b, c, d)		((uint32_t) ((((uint32_t) (a)) << 24) | ((b) << 16) | ((c) << 8) | (d)))
 #else
-	#error "Target CPU endian-ness unknown. May need to hand edit src/sfconfig.h"
+	#error "Target CPU endian-ness unknown. May need to hand edit raylib/sfconfig.h"
 #endif
 
 /*
@@ -162,7 +162,7 @@ ENDSWAP_64 (uint64_t x)
 	#define H2LE_32(x)			ENDSWAP_32 (x)
 
 #else
-	#error "Target CPU endian-ness unknown. May need to hand edit src/sfconfig.h"
+	#error "Target CPU endian-ness unknown. May need to hand edit raylib/sfconfig.h"
 #endif
 
 #define LE2H_32_PTR(x)			(((x) [0]) + ((x) [1] << 8) + ((x) [2] << 16) + ((x) [3] << 24))

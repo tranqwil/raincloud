@@ -98,7 +98,7 @@ main (int argc, char *argv [])
 	{	string_start_test ("strings.aiff", SF_FORMAT_AIFF) ;
 		string_start_end_test ("strings.aiff", SF_FORMAT_AIFF) ;
 		/*
-		TODO : Fix src/aiff.c so these tests pass.
+		TODO : Fix raylib/aiff.c so these tests pass.
 		string_multi_set_test ("multi.aiff", SF_FORMAT_AIFF) ;
 		string_rdwr_test ("rdwr.aiff", SF_FORMAT_AIFF) ;
 		string_short_rdwr_test ("short_rdwr.aiff", SF_FORMAT_AIFF) ;
@@ -146,7 +146,7 @@ main (int argc, char *argv [])
 		string_start_end_test ("strings.caf", SF_FORMAT_CAF) ;
 		string_multi_set_test ("multi.caf", SF_FORMAT_CAF) ;
 		/*
-		TODO : Fix src/caf.c so these tests pass.
+		TODO : Fix raylib/caf.c so these tests pass.
 		string_rdwr_test ("rdwr.caf", SF_FORMAT_CAF) ;
 		string_short_rdwr_test ("short_rdwr.caf", SF_FORMAT_CAF) ;
 		string_header_update ("header_update.caf", SF_FORMAT_CAF) ;
@@ -159,7 +159,7 @@ main (int argc, char *argv [])
 		string_start_end_test ("strings.rf64", SF_FORMAT_RF64) ;
 		string_multi_set_test ("multi.rf64", SF_FORMAT_RF64) ;
 		/*
-		TODO : Fix src/rf64.c so these tests pass.
+		TODO : Fix raylib/rf64.c so these tests pass.
 		string_rdwr_test ("rdwr.rf64", SF_FORMAT_RF64) ;
 		string_short_rdwr_test ("short_rdwr.rf64", SF_FORMAT_RF64) ;
 		string_header_update ("header_update.rf64", SF_FORMAT_RF64) ;

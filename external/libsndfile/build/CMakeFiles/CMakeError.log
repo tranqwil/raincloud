@@ -1,0 +1,285 @@
+Determining if the include file byteswap.h exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e091e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e091e.dir\Debug\\" /Fd"cmTC_e091e.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  CheckIncludeFile.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'byteswap.h': No such file or directory [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_e091e.vcxproj]
+
+
+
+Determining if the include file dlfcn.h exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ce5a1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce5a1.dir\Debug\\" /Fd"cmTC_ce5a1.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  CheckIncludeFile.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'dlfcn.h': No such file or directory [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_ce5a1.vcxproj]
+
+
+
+Determining if the include file endian.h exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_511bb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_511bb.dir\Debug\\" /Fd"cmTC_511bb.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  CheckIncludeFile.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'endian.h': No such file or directory [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_511bb.vcxproj]
+
+
+
+Determining if the include file sys/time.h exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_31a68.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_31a68.dir\Debug\\" /Fd"cmTC_31a68.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  CheckIncludeFile.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'sys/time.h': No such file or directory [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_31a68.vcxproj]
+
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_93e7d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_93e7d.dir\Debug\\" /Fd"cmTC_93e7d.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  CheckIncludeFile.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_93e7d.vcxproj]
+
+
+
+Determining if the include file sys/wait.h exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c8be2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8be2.dir\Debug\\" /Fd"cmTC_c8be2.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  CheckIncludeFile.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'sys/wait.h': No such file or directory [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_c8be2.vcxproj]
+
+
+
+Determining size of ssize_t failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_18365.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_18365.dir\Debug\\" /Fd"cmTC_18365.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c
+  SIZEOF_SSIZE_T.c
+C:\dev\libsndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(29,12): error C2065: 'ssize_t': undeclared identifier [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_18365.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(30,12): error C2065: 'ssize_t': undeclared identifier [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_18365.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(31,12): error C2065: 'ssize_t': undeclared identifier [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_18365.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(32,12): error C2065: 'ssize_t': undeclared identifier [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_18365.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(33,12): error C2065: 'ssize_t': undeclared identifier [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_18365.vcxproj]
+
+
+C:/dev/libsndfile/build/CMakeFiles/CheckTypeSize/SIZEOF_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function sqlite3_close exists in the sqlite3 failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a35af.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sqlite3_close /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a35af.dir\Debug\\" /Fd"cmTC_a35af.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+LINK : fatal error LNK1104: cannot open file 'sqlite3.lib' [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_a35af.vcxproj]
+
+
+
+Determining if the function fstat64 exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_307f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fstat64 /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_307f9.dir\Debug\\" /Fd"cmTC_307f9.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol fstat64 referenced in function main [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_307f9.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_307f9.exe : fatal error LNK1120: 1 unresolved externals [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_307f9.vcxproj]
+
+
+
+Determining if the function gettimeofday exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_94cbd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gettimeofday /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_94cbd.dir\Debug\\" /Fd"cmTC_94cbd.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol gettimeofday referenced in function main [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_94cbd.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_94cbd.exe : fatal error LNK1120: 1 unresolved externals [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_94cbd.vcxproj]
+
+
+
+Determining if the function gmtime_r exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_13815.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gmtime_r /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_13815.dir\Debug\\" /Fd"cmTC_13815.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol gmtime_r referenced in function main [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_13815.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_13815.exe : fatal error LNK1120: 1 unresolved externals [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_13815.vcxproj]
+
+
+
+Determining if the function localtime_r exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_bed73.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=localtime_r /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bed73.dir\Debug\\" /Fd"cmTC_bed73.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol localtime_r referenced in function main [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_bed73.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_bed73.exe : fatal error LNK1120: 1 unresolved externals [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_bed73.vcxproj]
+
+
+
+Determining if the function pipe exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b9398.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pipe /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b9398.dir\Debug\\" /Fd"cmTC_b9398.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol pipe referenced in function main [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_b9398.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_b9398.exe : fatal error LNK1120: 1 unresolved externals [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_b9398.vcxproj]
+
+
+
+Determining if the function waitpid exists failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_9743d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=waitpid /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9743d.dir\Debug\\" /Fd"cmTC_9743d.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol waitpid referenced in function main [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_9743d.vcxproj]
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\Debug\cmTC_9743d.exe : fatal error LNK1120: 1 unresolved externals [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_9743d.vcxproj]
+
+
+
+Determining if the S_IRGRP exist failed with the following output:
+Change Dir: C:/dev/libsndfile/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_466c8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  The vcpkg manifest was disabled, but we found a manifest file in C:\dev\libsndfile\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\Users\Will\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_466c8.dir\Debug\\" /Fd"cmTC_466c8.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+  CheckSymbolExists.c
+C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\CheckSymbolExists.c(8,19): error C2065: 'S_IRGRP': undeclared identifier [C:\dev\libsndfile\build\CMakeFiles\CMakeTmp\cmTC_466c8.vcxproj]
+
+
+File C:/dev/libsndfile/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/stat.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef S_IRGRP
+  return ((int*)(&S_IRGRP))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

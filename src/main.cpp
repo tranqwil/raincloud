@@ -3,11 +3,12 @@
 #include "SoundSource.h"
 #include "Stream.h"
 #include <stdio.h>
+#include <raylib.h>
 
 
 int main() {
 
-	printf("Starting RainCloud!\n");
+	InitWindow(800, 600, "RainCloud");
 
 	SoundDevice* device = SoundDevice::Get();
 	Stream stream ("../samples/song.wav");
@@ -15,10 +16,19 @@ int main() {
 	stream.Play();
 
 
-	while (true)
+	while (!WindowShouldClose())
 	{
+		BeginDrawing();
+		ClearBackground(PINK);
+		DrawText("RainCloud Demo", 190, 200, 20, BLACK);
+
+		EndDrawing();
 		stream.Update();
+
+
 	}
+
+	CloseWindow();
 
 
 
