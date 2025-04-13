@@ -51,6 +51,8 @@ add_executable(RainCloud
         src/SoundSource.h
         src/Stream.cpp
         src/Stream.h
+        src/GameCamera.cpp
+        src/GameCamera.h
 
 
 )
