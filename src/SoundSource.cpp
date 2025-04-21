@@ -31,10 +31,10 @@ void SoundSource::Play(ALuint bufferToPlay)
 	ALint playState;
 	alGetSourcei(sourceID, AL_SOURCE_STATE, &playState);
 
-	while (playState == AL_PLAYING) 
-	{
-		alGetSourcei(sourceID, AL_SOURCE_STATE, &playState);
-	}
+	// while (playState == AL_PLAYING)
+	// {
+	// 	alGetSourcei(sourceID, AL_SOURCE_STATE, &playState);
+	// }
 
 	printf("Done Playing %i \n", buffer);
 
