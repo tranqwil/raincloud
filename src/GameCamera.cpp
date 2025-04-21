@@ -28,7 +28,7 @@ void GameCamera::SetPosition(const Vector3 position) {
 
 void GameCamera::update() {
 
-    Move();
+    //Move();
 
     //Move audio listener
     alListener3f(AL_POSITION, position.x, position.y, position.z);
