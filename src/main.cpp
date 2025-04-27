@@ -29,9 +29,12 @@ int main() {
 	//Audio
 	SoundDevice* device = SoundDevice::Get();
 	SoundBuffer* soundBuffer = SoundBuffer::Get();
+	SoundBuffer* anotherSoundBuffer = SoundBuffer::Get();
 
 	ALuint track = soundBuffer->AddSoundEffect("../samples/song.wav");
+	ALuint shaker = anotherSoundBuffer->AddSoundEffect("../samples/shaker.wav");
 	SoundSource speaker;
+	SoundSource anotherSpeaker;
 	speaker.SetGain(1.0f);
 	speaker.SetPitch(1.0f);
 	speaker.SetPosition(0.0f,0.5f, 0.0f);
@@ -81,6 +84,10 @@ int main() {
 			speaker.SetFade(FadeState::FadingOut, .5f);
 		}
 
+		if (IsKeyPressed(KEY_ENTER)) {
+			anotherSpeaker.Play(shaker);
+		}
+
 		speaker.Update(GetFrameTime());
 
 
@@ -106,6 +113,9 @@ int main() {
 		// Draw
 		BeginDrawing();
 		ClearBackground(DARKBLUE);
+		DrawText("Fade In: I", 15, 15, 15, GREEN);
+		DrawText("Fade Out: O", 15, 30, 15, GREEN);
+		DrawText("Zoom In / Out : MouseWheel", 15, 45, 15, GREEN);
 
 		BeginMode3D(camera);
 		DrawGrid(100, 1.0f); // Draw grid (20x20 lines, 1 unit spacing)
