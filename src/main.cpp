@@ -73,6 +73,16 @@ int main() {
 
 		}
 
+		if (IsKeyPressed(KEY_I)) {
+			speaker.SetFade(FadeState::FadingIn, .5f);
+		}
+
+		if (IsKeyPressed(KEY_O)) {
+			speaker.SetFade(FadeState::FadingOut, .5f);
+		}
+
+		speaker.Update(GetFrameTime());
+
 
 
 		UpdateCamera(&camera, CAMERA_ORBITAL);

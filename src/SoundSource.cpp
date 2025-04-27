@@ -1,11 +1,6 @@
 #include "SoundSource.h"
 #include <stdio.h>
 
-enum class FadeState {
-	None,
-	FadingIn,
-	FadingOut
-};
 
 
 SoundSource::SoundSource()
@@ -52,6 +47,12 @@ void SoundSource::Stop()
 	}
 }
 
+void SoundSource::Update(float dt)
+{
+	HandleFade(dt);
+
+}
+
 void SoundSource::SetIsLooping(bool loop)
 {
 	isLooping = loop;
@@ -88,3 +89,54 @@ void SoundSource::SetVelocity(float x, float y, float z)
 
   alSource3f(sourceID, AL_VELOCITY, velocity[0], velocity[1], velocity[2]);
 }
+
+void SoundSource::SetFade(FadeState state, float fadeDuration)
+{
+	//Ignore calls to nothing, or fade out when we've already faded out, or fade in when we've already faded in.
+	if (state == FadeState::None){return;}
+	if (state == FadeState::FadingIn && fadeState == FadeState::DoneFadingIn){return;}
+	if (state == FadeState::FadingOut && fadeState == FadeState::DoneFadingOut){return;}
+
+	fadeState = state;
+	if (fadeState == FadeState::FadingIn)
+	{
+		fadeTimeTarget = fadeDuration;
+		fadeTime = 0.0f;
+		printf("Fading in. \n");
+
+	}
+	else if (fadeState == FadeState::FadingOut)
+	{
+		fadeTimeTarget = fadeDuration;
+		fadeTime = fadeTimeTarget;
+
+		printf("Fading out. \n");
+	}
+}
+
+void SoundSource::HandleFade(float dt) {
+
+	float gainMultiplier = 1.0f;
+	if (fadeState == FadeState::FadingIn)
+	{
+		fadeTime += dt;
+		gainMultiplier = ( fadeTime / fadeTimeTarget);
+
+		if (fadeTime >= fadeTimeTarget){fadeState = FadeState::DoneFadingIn;}
+		else {this->SetGain(gainMultiplier);}
+	}
+	else if (fadeState == FadeState::FadingOut)
+	{
+		fadeTime -= dt;
+		gainMultiplier = ( fadeTime / fadeTimeTarget);
+
+		if (fadeTime <= 0.0f) {
+			this->SetGain(0.0f);
+			fadeState= FadeState::DoneFadingOut;
+		}
+		else {this->SetGain(gainMultiplier);}
+	}
+
+}
+
+
