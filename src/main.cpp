@@ -17,12 +17,12 @@
 int main() {
 
 	//Raylib
-	InitWindow(800, 600, "RainCloud");
+	InitWindow(960, 540, "RainCloud");
 	SetTargetFPS(60);
 	Camera camera = { 0 };
 	camera.position = Vector3( 0.0f, 10.0f, 10.0f );  // Camera position	camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };       // Camera looking at point
 	camera.up = Vector3( 0.0f, 1.0f, 0.0f );           // Camera up vector
-	camera.fovy = 45.0f;                                 // Camera field-of-view Y
+	camera.fovy = 90.0f;                                 // Camera field-of-view Y
 	camera.projection = CAMERA_PERSPECTIVE;              // Perspective mode
 
 
@@ -35,11 +35,12 @@ int main() {
 	speaker.SetGain(1.0f);
 	speaker.SetPitch(1.0f);
 	speaker.SetPosition(0.0f,0.5f, 0.0f);
+	speaker.SetIsLooping(true);
 	speaker.Play(track);
 
 
 	//Cube
-	Vector3 cubePosition (3.0f, 0.5f, -6.0f);
+	Vector3 cubePosition (3.0f, 0.5f, -1.0f);
 
 
 
@@ -64,6 +65,12 @@ int main() {
 		if (IsKeyDown(KEY_RIGHT))
 		{
 			cubePosition.x += 0.1f;
+		}
+
+		if (IsKeyDown(KEY_SPACE))
+		{
+			cubePosition = Vector3(3.0f, 0.5, -1.0f);
+
 		}
 
 
@@ -99,6 +106,7 @@ int main() {
 		EndDrawing();
 
 		speaker.SetPosition(cubePosition.x, cubePosition.y, cubePosition.z);
+
 	}
 	CloseWindow();
 

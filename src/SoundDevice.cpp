@@ -11,6 +11,13 @@ SoundDevice* SoundDevice::Get()
 	return soundDevice;
 }
 
+ALCint SoundDevice::GetSampleRate() const {
+	ALCint sr;
+	alcGetIntegerv(pALCdevice, ALC_FREQUENCY, 1, &sr);
+	return sr;
+
+}
+
 SoundDevice::SoundDevice()
 {
 	//Get Default Windows Device

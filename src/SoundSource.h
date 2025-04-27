@@ -8,6 +8,8 @@ public:
 
 	void Play(ALuint bufferToPlay);
 
+	void Stop();
+
 	void SetIsLooping(bool loop);
 
 	void SetPitch(float pitch);

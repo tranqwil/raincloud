@@ -1,6 +1,13 @@
 #include "SoundSource.h"
 #include <stdio.h>
 
+enum class FadeState {
+	None,
+	FadingIn,
+	FadingOut
+};
+
+
 SoundSource::SoundSource()
 {
 	alGenSources(1, &sourceID);
@@ -31,14 +38,18 @@ void SoundSource::Play(ALuint bufferToPlay)
 	ALint playState;
 	alGetSourcei(sourceID, AL_SOURCE_STATE, &playState);
 
-	// while (playState == AL_PLAYING)
-	// {
-	// 	alGetSourcei(sourceID, AL_SOURCE_STATE, &playState);
-	// }
+}
 
-	printf("Done Playing %i \n", buffer);
+void SoundSource::Stop()
+{
+	alSourceStop(sourceID);
+	ALint playState;
+	alGetSourcei(sourceID, AL_SOURCE_STATE, &playState);
 
-
+	if (playState == AL_PLAYING)
+	{
+		printf("Stopped Playing %i \n", buffer);
+	}
 }
 
 void SoundSource::SetIsLooping(bool loop)
