@@ -14,7 +14,7 @@ set(ALSOFT_INSTALL                OFF CACHE BOOL "" FORCE)
 set(ALSOFT_INSTALL_CONFIG         OFF CACHE BOOL "" FORCE)
 set(ALSOFT_INSTALL_HRTF_DATA      OFF CACHE BOOL "" FORCE)
 set(ALSOFT_INSTALL_AMBDEC_PRESETS OFF CACHE BOOL "" FORCE)
-add_subdirectory(external/openal-soft)
+add_subdirectory(external/openal)
 
 
 #LIBSNDFILE
@@ -22,7 +22,7 @@ set(BUILD_PROGRAMS  OFF CACHE BOOL "" FORCE)
 set(BUILD_EXAMPLES  OFF CACHE BOOL "" FORCE)
 set(BUILD_TESTING   OFF CACHE BOOL "" FORCE)
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
-add_subdirectory(external/libsndfile)
+add_subdirectory(external/sndfile)
 
 
 #RAINCLOUD
