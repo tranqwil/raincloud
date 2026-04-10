@@ -1,21 +1,34 @@
-#pragma once
-#include <AL/al.h>
+#ifndef SOUNDBUFFER_H
+#define SOUNDBUFFER_H
+
+
+
+
 #include <vector>
-class SoundBuffer
+#include "RaincloudAPI.h"
+#include <RaincloudTypes.h>
+
+namespace Raincloud
 {
-public: 
-	
-	static SoundBuffer* Get();
+	class RAINCLOUD_API SoundBuffer
+	{
+	public:
 
-	ALuint AddSoundEffect(const char* filename);
+		static SoundBuffer* Get();
 
-	bool RemoveSoundEffect(ALuint& buffer);	
+		BufferHandle AddSoundEffect(const char* filename);
 
-private:
-	SoundBuffer();
-	~SoundBuffer();
-	
-	std::vector<ALuint> pSoundEffectBuffers;
+		bool RemoveSoundEffect(BufferHandle& buffer);
 
-};
+	private:
+		SoundBuffer();
+		~SoundBuffer();
 
+		std::vector<BufferHandle> pSoundEffectBuffers;
+
+	};
+
+}
+
+
+#endif
