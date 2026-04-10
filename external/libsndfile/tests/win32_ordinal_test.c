@@ -49,7 +49,7 @@
 
 
 static const char * locations [] =
-{	".", "../raylib/", "raylib/", "../raylib/.libs/", "raylib/.libs/",
+{	".", "../src/", "src/", "../src/.libs/", "src/.libs/",
 	NULL
 } ; /* locations. */
 
