@@ -1,58 +1,60 @@
-#pragma once
-#include <AL/al.h>
+#ifndef SOUNDSOURCE_H
+#define SOUNDSOURCE_H
 
-enum class FadeState {
-	None,
-	FadingIn,
-	FadingOut,
-	DoneFadingIn,
-	DoneFadingOut
-};
+#include <memory>
+#include <RaincloudTypes.h>
+#include "RaincloudAPI.h"
 
 
-class SoundSource
+namespace Raincloud
 {
-public:
-	SoundSource();
-	~SoundSource();
-
-	void Play(ALuint bufferToPlay);
-
-	void Stop();
-
-	void Update(float dt);
-
-	void SetIsLooping(bool loop);
-
-	void SetPitch(float pitch);
-
-	void SetGain(float gain);
-
-	void SetPosition(float x, float y, float z);
-
-	void SetVelocity(float x, float y, float z);
-
-	void SetFade(FadeState state, float fadeDuration);
+	 enum class FadeState {
+		None,
+		FadingIn,
+		FadingOut,
+		DoneFadingIn,
+		DoneFadingOut
+	};
 
 
+	class RAINCLOUD_API SoundSource
+	{
+	public:
+		SoundSource();
+		~SoundSource();
 
-private:
+		void Play(BufferHandle bufferToPlay);
 
-	void HandleFade(float dt);
+		void Stop();
 
-	ALuint sourceID = 0;
-	float pitch = 1.0f;
-	float gain = 1.0f;
-	float position[3] = { 0.0f, 0.0f, 0.0f };
-	float velocity[3] = { 0.0f, 0.0f, 0.0f };
-	bool isLooping = false;
-	ALuint buffer = 0;
+		void Update(float dt);
 
-	FadeState fadeState = FadeState::None;
-	float fadeTime = 0.0f;
-	float fadeTimeTarget = 0.0f;
+		void SetIsLooping(bool loop);
 
-};
+		void SetPitch(float pitch);
 
+		void SetGain(float gain);
+
+		void SetPosition(float x, float y, float z);
+
+		void SetVelocity(float x, float y, float z);
+
+		void SetFade(FadeState state, float fadeDuration);
+
+
+
+	private:
+
+		struct Impl;
+		std::unique_ptr<Impl> m_Impl;
+
+	};
+
+}
+
+
+
+
+#endif
 
 

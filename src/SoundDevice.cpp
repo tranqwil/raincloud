@@ -5,29 +5,39 @@
 #include <stdio.h>
 #include <iostream>
 
+using namespace Raincloud;
+
+struct SoundDevice::Impl
+{
+	ALCdevice* pALCdevice;
+	ALCcontext* pALCcontext;
+
+};
+
 SoundDevice* SoundDevice::Get()
 {
 	static SoundDevice* soundDevice = new SoundDevice();
 	return soundDevice;
 }
 
-ALCint SoundDevice::GetSampleRate() const {
+int SoundDevice::GetSampleRate() const {
 	ALCint sr;
-	alcGetIntegerv(pALCdevice, ALC_FREQUENCY, 1, &sr);
+	alcGetIntegerv(m_Impl->pALCdevice, ALC_FREQUENCY, 1, &sr);
 	return sr;
 
 }
 
 SoundDevice::SoundDevice()
+	:m_Impl(std::make_unique<Impl>())
 {
 	//Get Default Windows Device
-	pALCdevice = alcOpenDevice(nullptr);
-	if(!pALCdevice)
+	m_Impl->pALCdevice = alcOpenDevice(nullptr);
+	if(!m_Impl->pALCdevice)
 	{
 		std::cerr << "SoundDevice::SoundDevice() - Failed to get default device";
 	}
 
-	if (alcIsExtensionPresent(pALCdevice, "ALC_SOFT_HRTF") == AL_FALSE) {
+	if (alcIsExtensionPresent(m_Impl->pALCdevice, "ALC_SOFT_HRTF") == AL_FALSE) {
         std::cout << "HRTF not supported.\n";}
 
 	//HRTF
@@ -37,31 +47,31 @@ SoundDevice::SoundDevice()
 
 
 	//Create ALC Context
-	pALCcontext = alcCreateContext(pALCdevice, attrs);
-	if (!pALCcontext)
+	m_Impl->pALCcontext = alcCreateContext(m_Impl->pALCdevice, attrs);
+	if (!m_Impl->pALCcontext)
 	{
 		std::cerr << "SoundDevice::SoundDevice() - Failed to create context";
 	}
 
 	//Make context the current context
-	if (!alcMakeContextCurrent(pALCcontext))
+	if (!alcMakeContextCurrent(m_Impl->pALCcontext))
 	{
 		std::cerr << "SoundDevice::SoundDevice() - Failed to make context current";
 	}
 
 	const ALCchar* name = nullptr;
-	if (alcIsExtensionPresent(pALCdevice, "ALC_ENUMERATE_ALL_EXT"))
+	if (alcIsExtensionPresent(m_Impl->pALCdevice, "ALC_ENUMERATE_ALL_EXT"))
 	{
-		name = alcGetString(pALCdevice, ALC_ALL_DEVICES_SPECIFIER);
+		name = alcGetString(m_Impl->pALCdevice, ALC_ALL_DEVICES_SPECIFIER);
 	}
-	if (!name || alcGetError(pALCdevice) != ALC_NO_ERROR)
+	if (!name || alcGetError(m_Impl->pALCdevice) != ALC_NO_ERROR)
 	{
-		name = alcGetString(pALCdevice, ALC_DEVICE_SPECIFIER);
+		name = alcGetString(m_Impl->pALCdevice, ALC_DEVICE_SPECIFIER);
 	}
 	printf("Opened \"%s\"\n", name);
 
 	ALCint hrtfEnabled;
-    alcGetIntegerv(pALCdevice, ALC_HRTF_SOFT, 1, &hrtfEnabled);
+    alcGetIntegerv(m_Impl->pALCdevice, ALC_HRTF_SOFT, 1, &hrtfEnabled);
     std::cout << "HRTF enabled: " << (hrtfEnabled ? "Yes" : "No") << std::endl;
 
 
@@ -77,13 +87,13 @@ SoundDevice::~SoundDevice()
 		std::cerr << "SoundDevice::~SoundDevice() - Failed to make context current";
 	}
 
-	alcDestroyContext(pALCcontext);
-	if (pALCcontext) 
+	alcDestroyContext(m_Impl->pALCcontext);
+	if (m_Impl->pALCcontext)
 	{
 		std::cerr << "SoundDevice::~SoundDevice() - Failed to destroy context";
 	}
 
-	if (!alcCloseDevice(pALCdevice))
+	if (!alcCloseDevice(m_Impl->pALCdevice))
 	{
 		std::cerr << "SoundDevice::~SoundDevice() - Failed to close device";
 	}
