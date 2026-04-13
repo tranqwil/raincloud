@@ -1,0 +1,6 @@
+[submodule "external/openal"]
+	path = external/openal
+	url = https://github.com/kcat/openal-soft.git
+[submodule "external/sndfile"]
+	path = external/sndfile
+	url = https://github.com/libsndfile/libsndfile.git

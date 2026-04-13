@@ -2,8 +2,9 @@
 #include <sndfile.h>
 #include <inttypes.h>
 #include <AL/alext.h>
+#include <AL/al.h>
 #include <cstdlib>
-
+using namespace Raincloud;
 SoundBuffer* SoundBuffer::Get()
 {
 	static SoundBuffer* soundbuffer = new SoundBuffer();
@@ -21,7 +22,7 @@ SoundBuffer::~SoundBuffer()
 	pSoundEffectBuffers.clear();
 }
 
-ALuint SoundBuffer::AddSoundEffect(const char* filename)
+BufferHandle SoundBuffer::AddSoundEffect(const char* filename)
 {	
 	//Attributes for new sound file
 	ALenum err; 
@@ -112,7 +113,7 @@ ALuint SoundBuffer::AddSoundEffect(const char* filename)
 	return buffer;
 }
 
-bool SoundBuffer::RemoveSoundEffect(ALuint& buffer)
+bool SoundBuffer::RemoveSoundEffect(BufferHandle& buffer)
 {
 	//Create a iterator to find the buffer in the vector
 	auto it = pSoundEffectBuffers.begin();
