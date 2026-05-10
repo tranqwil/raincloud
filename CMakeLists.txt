@@ -15,6 +15,7 @@ set(CMAKE_CXX_STANDARD 20)
 ##set(ALSOFT_INSTALL_HRTF_DATA      OFF CACHE BOOL "" FORCE)
 ##set(ALSOFT_INSTALL_AMBDEC_PRESETS OFF CACHE BOOL "" FORCE)
 add_subdirectory(external/openal)
+target_compile_options(OpenAL PRIVATE -Wno-function-effects)
 
 
 #LIBSNDFILE
