@@ -15,7 +15,7 @@ int main()
 
     Raincloud::SoundDevice* device = Raincloud::SoundDevice::Get();
     Raincloud::SoundBuffer* buffer = Raincloud::SoundBuffer::Get();
-    auto track = buffer->AddSoundEffect("resources/song.wav");
+    auto track = buffer->AddSoundEffect("samples/song.wav");
 
     Raincloud::SoundSource speaker;
     speaker.SetGain(1.0f);
