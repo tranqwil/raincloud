@@ -15,7 +15,7 @@ int main()
 
     std::cout << "Raincloud Example Streaming.\n";
 
-    Raincloud::Stream stream ("resources/song.wav");
+    Raincloud::Stream stream ("samples/song.wav");
     stream.Play();
 
     while (true) {
